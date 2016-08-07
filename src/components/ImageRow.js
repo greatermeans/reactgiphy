@@ -5,13 +5,16 @@ class ImageRow extends Component {
 
   RenderGiphs () {
   	return this.props.data.map((giph)=> {
-  		return <ImageItem key={giph.id} width={giph.images.fixed_height.width} height={giph.images.fixed_height.height}  gifSrc={giph.images.fixed_height.url} stillSrc={giph.images.fixed_height_still.url} />
+  		return <ImageItem key={giph.id} gifSrc={giph.images.fixed_height.url} stillSrc={giph.images.fixed_height_still.url} />
   	})
   }
 
   render() {
     return (
-      <div id='collection'> {this.RenderGiphs()} </div>
+      <div id='collection'> 
+       <center><div> There are {this.props.data.length} gifs available </div></center>
+       <div> {this.RenderGiphs()} </div>
+      </div>
     );
   }
 }

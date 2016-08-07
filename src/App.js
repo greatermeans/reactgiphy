@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery'
-import logo from './logo.svg';
+import 'react-bootstrap';
 import './App.css';
 import giphyAPI from './adapters/adapter.js'
-import ImageItem from './components/ImageItem.js'
 import ImageRow from './components/ImageRow.js'
 import Selector from './components/Selector.js'
 
@@ -32,10 +30,10 @@ class App extends Component {
   render() {
     return (
       <div className='main'>
-        <div id='search'>
+        <div id='search' className='search-bar'>
           <Selector displayResults={this.displayResults.bind(this)} />
         </div>
-        <div id='giphgrid'>
+        <div id='giphgrid' className='grid col-md-10'>
           <ImageRow data={this.state.results} />
         </div>
       </div>

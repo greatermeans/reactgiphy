@@ -8,13 +8,12 @@ class Selector extends Component {
   	super(props)
   }
 
-  findGiphs () {
+  findGiphs (event) {
   	event.preventDefault()
     var search = document.querySelector('input').value
-
+    document.querySelector('form').reset()
     giphyAPI(search).then(
       (results)=>{
-      	// this here equals the get request
         this.setState({search: search});
         search="";
         this.props.displayResults(results.data);
