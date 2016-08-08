@@ -22,7 +22,7 @@ class ImageItem extends Component {
   render() {
     return (
     	<figure className='grid-item'>
-          <img src={this.state.source} width={this.props.width} height={this.props.height} alt="" onMouseOver={this.Moused.bind(this)} onMouseOut={this.unMoused.bind(this)}/>
+          <img src={this.state.source} alt="" onMouseOver={this.Moused.bind(this)} onMouseOut={this.unMoused.bind(this)}/>
         </figure>
     );
   }
